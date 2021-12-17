@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  /* Color primary */
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  /* Neutral */
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  /* Typography */
+  --Font-size-paragraph: 16px;
+  --font-family: 'Red Hat Display', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--Pale-blue);
+  font-family: var(--font-family);
+}
+
+.card {
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.card,
+.img {
+  width: 400px;
+}
+
+.card__content {
+  padding: 24px;
+}
+
+.card .img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card .title {
+  font-size: 18px;
+}
+
+.card .text {
+  margin-top: 17px;
+  font-size: var(--Font-size-paragraph);
+}
+
+.card .card__show-music {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-pale-blue);
+  padding: 15px 28px;
+  border-radius: 12px;
+  margin-top: 24px;
+}
+
+.card__show-music .plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__show-music .plan img {
+  padding-right: 12px;
+}
+
+.card__show-music .plan .link {
+  color: rgb(23, 23, 146);
+  font-size: var(--Font-size-paragraph);
+}
+
+.card__show-music .plan .link:hover {
+  text-decoration: none;
+  color: var(--Desaturated-blue);
+}
+
+.card__show-music .plan .subplan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 72px;
+}
+
+.card__show-music .plan .subplan .name__plan {
+  color: #000;
+  font-size: var(--Font-size-paragraph);
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.card__show-music .plan .subplan .plan__price {
+  color: rgb(128, 128, 128);
+}
+
+.first {
+  display: block;
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background-color: var(--Bright-blue);
+  box-shadow: 0 10px 20px rgb(156, 156, 156);
+  cursor: pointer;
+}
+
+.first a{
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: var(--Font-size-paragraph);
+}
+
+.second {
+  display: block;
+  margin-top: 25px;
+  width: 100%;
+  border-style: none;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+.second a {
+  color: rgb(128, 128, 128);
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+button.first:hover {
+  background-color: var(--Desaturated-blue);
+}
+
+.second a:hover {
+  color: #000;
+}
+
+/* mobile desing */
+
+@media (width: 407px) {
+  .card,
+  .img {
+    width: 200px;
+  }
+
+  .card__content {
+    padding: 16px;
+  }
+  
+  .card .title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .card .text {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  
+  .card__show-music .plan img {
+    width: 40px;
+    height: 30px;
+  }
+  
+  .card__show-music .plan .link {
+    font-size: 10px;
+  }
+  
+  .card__show-music .plan .subplan {
+    padding-right: 22px;
+  }
+  
+  .card__show-music .plan .subplan .name__plan {
+    font-size: 10px;
+    line-height: 0px;
+  }
+  
+  .card__show-music .plan .subplan .plan__price {
+    font-size: 10px;
+  }
+
+  .first{
+    padding: 10px;
+    border-radius: 7px;
+  }
+
+  .first a,
+  .second a{
+    font-size: 10px;
+  }
+
+  .second {
+    margin-top: 15px;
+  }
+}
+
